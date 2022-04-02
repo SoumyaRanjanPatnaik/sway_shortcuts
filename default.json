@@ -4,21 +4,21 @@
         "combi": "XF86MonBrightnessUp",
         "type": "exec",
         "clause": "light -A 5",
-        "locked": true,
+        "locked": true
     },
     {
         "name": "Brightness Down",
         "combi": "XF86MonBrightnessUp",
         "type": "exec",
         "clause": "light -U 5",
-        "locked": true,
+        "locked": true
     },
     {
         "name": "Floating Toggle",
         "combi": "Super+Shift+space",
         "type": "floating",
         "clause": "toggle",
-        "locked": false,
+        "locked": false
     },
     {
         "name": "Focus Floating",

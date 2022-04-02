@@ -21,9 +21,20 @@ public:
     ~Dialog();
 
 private:
+    // Private Variables
     Ui::Dialog *ui;
-    QString config_loc="/etc/swaykbd/config.json";
-    QJsonDocument readJson();
+    QString configDir;
+    QString configFilename = "config.json";
+    QString configLoc;
+    QFile configFile;
+    QJsonDocument kbdConfig;
+
+    // Private Functions
+    void readJson();
+    void writeJson();
+    void writeJson(QByteArray json);
     void resetDefaults();
+private slots:
+    void on_pbReset_clicked();
 };
 #endif // DIALOG_H
