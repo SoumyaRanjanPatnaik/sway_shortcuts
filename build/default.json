@@ -1,0 +1,44 @@
+[
+    {
+        "name": "Brightness Up",
+        "combi": "XF86MonBrightnessUp",
+        "type": "exec",
+        "clause": "light -A 5",
+        "locked": true
+    },
+    {
+        "name": "Brightness Down",
+        "combi": "XF86MonBrightnessDown",
+        "type": "exec",
+        "clause": "light -U 5",
+        "locked": true
+    },
+    {
+        "name": "Floating Toggle",
+        "combi": "Super+Shift+space",
+        "type": "floating",
+        "clause": "toggle",
+        "locked": false
+    },
+    {
+        "name": "Focus Floating",
+        "combi": "Super+space",
+        "type": "focus",
+        "clause": "mode_toggle",
+        "locked": false
+    },
+    {
+        "name": "Workspace  1",
+        "combi": "Super+1",
+        "type": "workspace",
+        "clause": 1,
+        "locked": false
+    },
+    {
+        "name": "Firefox",
+        "combi": "Super+Shift+Return",
+        "type": "exec",
+        "clause": "firefox",
+        "locked": false
+    }
+]

@@ -1,0 +1,5 @@
+/home/soumyarp/projects/GSoC/sway_shortcuts/build/CMakeFiles/sway_shortcuts.dir
+/home/soumyarp/projects/GSoC/sway_shortcuts/build/CMakeFiles/edit_cache.dir
+/home/soumyarp/projects/GSoC/sway_shortcuts/build/CMakeFiles/rebuild_cache.dir
+/home/soumyarp/projects/GSoC/sway_shortcuts/build/CMakeFiles/sway_shortcuts_autogen_timestamp_deps.dir
+/home/soumyarp/projects/GSoC/sway_shortcuts/build/CMakeFiles/sway_shortcuts_autogen.dir
