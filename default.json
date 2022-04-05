@@ -8,7 +8,7 @@
     },
     {
         "name": "Brightness Down",
-        "combi": "XF86MonBrightnessUp",
+        "combi": "XF86MonBrightnessDown",
         "type": "exec",
         "clause": "light -U 5",
         "locked": true

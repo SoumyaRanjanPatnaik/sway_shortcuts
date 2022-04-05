@@ -11,6 +11,8 @@
 #include <QJsonValue>
 #include <QKeyEvent>
 #include <QKeySequenceEdit>
+#include <shortcutedit.h>
+#include <QMutex>
 
 
 QT_BEGIN_NAMESPACE
@@ -24,14 +26,12 @@ class Dialog : public QDialog
 public:
     Dialog(QWidget *parent = nullptr);
     ~Dialog();
-    void setApplication(QApplication *a){
-        this->a = a;
-    };
 
 private:
     // Private Variables
     Ui::Dialog *ui;
-    QApplication *a=nullptr;
+    bool isEditingShortcut = false;
+    quint32 currIndex = 0;
 
     // Locations and Files
     QString configDir;
@@ -41,6 +41,7 @@ private:
 
     // Json object storing keyboard config
     QJsonDocument kbdConfig;
+    QJsonArray kbdArray;
 
     // I/O Config
     void configureLocations();
@@ -50,23 +51,33 @@ private:
     void writeConfig(QByteArray &s);
 
     // Helper Functions
-    bool validateConfigObject(QJsonObject &obj);
     void populateCmb();
     void resetDefaults();
     QByteArray generateConfig();
-    void clearKsShortcut();
     QString getKbdShortcut();
+    QJsonObject getKbdObject(quint32 index);
     void setKbdShortcut(QString combi);
+    int spawnEditWindow(QSharedPointer<QJsonObject> obj, bool isEditWindow);
+    void addAction();
+    void updateAction(int index);
+    void cmbInsertActions();
+    void cmbUpdateAllActions();
 
+    // Mutex
+    QMutex mutex;
 
 private slots:
     void on_pbReset_clicked();
     void on_pbSave_clicked();
     void on_cmbAction_currentIndexChanged(int index);
+    void on_pbEdit_clicked();
+    void on_pbApply_clicked();
+    void on_pbEditAction_clicked();
+    void on_pbAddAction_clicked();
+    void saveEditAction(QSharedPointer<QJsonObject> obj,bool edit = false, int index = 0);
 
-    void on_pbRecord_clicked();
-//    void saveSequence();
-    void on_leShortcut_textChanged(const QString &arg1);
+
+    void on_cbLocked_toggled(bool checked);
 
 signals:
     void save();

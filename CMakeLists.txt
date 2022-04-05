@@ -16,9 +16,8 @@ find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 
 set(PROJECT_SOURCES
         main.cpp
-        dialog.cpp
-        dialog.h
-        dialog.ui
+        dialog.cpp dialog.h dialog.ui
+        shortcutedit.h shortcutedit.cpp shortcutedit.ui
         default.json
 )
 
@@ -58,3 +57,15 @@ set_target_properties(sway_shortcuts PROPERTIES
 if(QT_VERSION_MAJOR EQUAL 6)
     qt_finalize_executable(sway_shortcuts)
 endif()
+
+install(TARGETS sway_shortcuts
+    RUNTIME DESTINATION bin
+)
+
+install (FILES default.json DESTINATION /etc/sway_shortcuts)
+add_custom_command(
+    TARGET sway_shortcuts PRE_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy
+            ${CMAKE_SOURCE_DIR}/default.json
+            ${CMAKE_CURRENT_BINARY_DIR}/default.json
+)
