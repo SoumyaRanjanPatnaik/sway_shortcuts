@@ -1,5 +1,9 @@
 /home/soumyarp/projects/GSoC/sway_shortcuts/build/CMakeFiles/sway_shortcuts.dir
 /home/soumyarp/projects/GSoC/sway_shortcuts/build/CMakeFiles/edit_cache.dir
 /home/soumyarp/projects/GSoC/sway_shortcuts/build/CMakeFiles/rebuild_cache.dir
+/home/soumyarp/projects/GSoC/sway_shortcuts/build/CMakeFiles/list_install_components.dir
+/home/soumyarp/projects/GSoC/sway_shortcuts/build/CMakeFiles/install.dir
+/home/soumyarp/projects/GSoC/sway_shortcuts/build/CMakeFiles/install/local.dir
+/home/soumyarp/projects/GSoC/sway_shortcuts/build/CMakeFiles/install/strip.dir
 /home/soumyarp/projects/GSoC/sway_shortcuts/build/CMakeFiles/sway_shortcuts_autogen_timestamp_deps.dir
 /home/soumyarp/projects/GSoC/sway_shortcuts/build/CMakeFiles/sway_shortcuts_autogen.dir

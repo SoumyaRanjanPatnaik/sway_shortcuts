@@ -1,0 +1,2 @@
+# Hashes of file build rules.
+66f1f8658f1c8fb7119e28b18a5d78c4 CMakeFiles/sway_shortcuts_autogen

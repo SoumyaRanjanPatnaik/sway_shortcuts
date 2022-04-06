@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/sway_shortcuts.dir/sway_shortcuts_autogen/mocs_compilation.cpp.o CMakeFiles/sway_shortcuts.dir/main.cpp.o CMakeFiles/sway_shortcuts.dir/dialog.cpp.o CMakeFiles/sway_shortcuts.dir/shortcutedit.cpp.o -o sway_shortcuts  /usr/lib/libQt5Widgets.so.5.15.3 /usr/lib/libQt5Gui.so.5.15.3 /usr/lib/libQt5Core.so.5.15.3 
