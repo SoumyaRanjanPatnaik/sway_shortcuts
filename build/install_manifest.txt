@@ -1,2 +1,0 @@
-/usr/local/bin/sway_shortcuts
-/etc/sway_shortcuts/default.json
